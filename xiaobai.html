@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 外部 CSS 文件引入 -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- 外部 JavaScript 文件引入 -->
+    <script src="6666.js" defer></script>
+    <style>
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 30vh;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+        .dropdown-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 0px;
+            background-color: #03527c;
+            border: 1px solid #03527c;
+            padding: 20px;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+        .dropdown {
+            position: relative;
+            background-color: #066da5;
+            border: 1px solid #066da5;
+            padding: 10px;
+            transition: background-color 0.3s;
+            /* 添加过渡效果 */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #08a4f9;
+            min-width: 100px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 8px;
+            padding: 10px;
+            transition: opacity 0.3s ease-in-out;
+            /* 添加过渡效果 */
+            opacity: 0;
+            /* 默认初始透明度为0 */
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: #f2f2f2;
+            transition: background-color 0.3s;
+            /* 添加过渡效果 */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #060101;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            opacity: 1;
+            /* 鼠标悬停时透明度变为1 */
+            transition: opacity 0.3s ease-in-out;
+            /* 添加过渡效果 */
+        }
+
+        .dropdown-item {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+
+        .dropdown-item:hover {
+            background-color: #ddd;
+        }
+
+        .upper-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            /* 确保上层图片在上面 */
+        }
+
+        .lower-image {
+            style="padding: 50px;
+ width: 10px;
+            height: 200px;
+            margin-top: -110px;
+            /* 调整上层图片的垂直位置 */
+            z-index: 2;
+            /* 更大的 z-index 保证在上层 */
+        }
+
+        .text-container {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            /* 更大的 z-index 保证在两个图片之上 */
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    <!--头部栏-->
+    <div class="container">
+        <img src="https://i0.imgs.ovh/2024/02/01/K8CjH.png" class="lower-image" />
+        <img src="https://i0.imgs.ovh/2024/02/02/bsIgT.jpeg" class="upper-image">
+        <div style="font-size: 50px" class="text-container"><b><i>小白</i></b></div>
+    </div>
+    <!--导航-->
+    <div class="dropdown-container">
+        <div class="dropdown">
+            <span>Photoshop</span>
+            <div class="dropdown-content">
+                <a href="https://in.pinterest.com/search/pins/?q=%E9%BB%91%E9%87%91&rs=typed">图片素材</a>
+                <a href="http://www.psxiazai.com/category/pssucaixiazai">各种工具</a>
+                <a href="https://xsj.699pic.com/tupian/216n5b.html?from=32">各类模板</a>
+                <a href="https://imgloc.com/image/bsIgT">图床</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span>OpenAi </span>
+            <div class="dropdown-content">
+                <a href="https://chat.openai.com/c/51651c84-8bf3-4210-a826-9918317483b3">GPT 3.5</a>
+                <a href="https://www.coze.com/space/7317536451816751109/bot/7317536929266843654">Coze</a>
+                <a href="https://poe.com/login">Poe</a>
+                <a href="https://geminiprochat.com/">geminichat</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span>Html Css Js</span>
+            <div class="dropdown-content">
+                <a href="https://www.runoob.com/">菜鸟联盟</a>
+                <a href="https://developer.mozilla.org/zh-CN/">MDN</a>
+                <a href="https://github.com/">GitHub</a>
+                <a href="https://dash.infinityfree.com/accounts/if0_35915009/domains">InfinityFree</a>
+                <a href="http://www.mobanwang.com/mb/special/html5/">h5模板</a>
+                <a href="https://fontawesome.com/kits/">套件</a>
+                <a
+                    href="https://hpanel.hostinger.com/?redirect_back_url=https%3A%2F%2Fauth.hostinger.com.hk%2Flogin&_ga=GA1.3.121569413.1707108876">域名申请</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span>others</span>
+            <div class="dropdown-content">
+                <a href="https://docs.google.com/spreadsheets/u/0/">谷歌表格</a>
+                <a href="https://in.tradingview.com/">股票查询</a>
+                <a href="https://wordtojpeg.com/zh/">Word转换</a>
+            </div>
+        </div>
+    </div>
+
+    <style type="text/css">
+        #bottom-outer {
+            color: #989898;
+            text-align: center;
+            padding: 10px;
+            padding-top: 40px;
+            background-color: #070707;
+            font-size: 14px;
+            opacity: 0.85;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+    </style>
+
+<div class="suggestion-container" id="feedback">
+    <h2>意见建议</h2>
+    <p>如果您有任何意见或建议，请点击下方按钮提供反馈：</p>
+    <!-- 修改为按钮外观 -->
+    <button onclick="window.open('https://t.me/xiaobaizhuanyong1', '_blank')">提供反馈</button>
+</div>
+    <div id="bottom-outer">
+        <div id="bottom-inner">
+            <br>本站访问量：<span id="result1"></span>
+            -<span id="year"></span>
+        </div>
+    </div>
+    </div>
+    
+    <div id="feedback"></div>
+</body>
+<script type="text/javascript">
+
+    if (localStorage.pagecount) {
+        localStorage.pagecount = Nunber(localStorage.pagecount) + 1
+    } else {
+        localStorage.pagecount = 1;
+        document.getElementById("result1").innerHTML = localStorage.pag
+
+
+        var myDate = new Date();
+        var year = myDate.getFullyear();
+        document.getElementById('year').innerHTML = year;
+</script>
+
+</html>

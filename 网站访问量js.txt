@@ -1,0 +1,39 @@
+<style type="text/css">
+
+#bottom-outer{
+       color: #888;
+       text-align: center;
+       padding: 10px;
+       padding-top: 40px;
+       background-color: #fff;
+       font-size: 14px;
+       opacity: 0.85;
+       }
+</style>
+
+<div id="bottom-outer">
+    <div id="bottom-inner">
+      <br>本站访问量：<span id="result1"></span>
+      -<span id="year"></span>
+    </div>
+ </div>
+ </div>
+
+<script type="text/javascript">
+     
+                        if (localStorage.pagecount) {
+                                       localStorage.pagecount=Nunber(localStorage.pagecount)+1
+                        } else {
+                              localStorage.pagecount=1;
+                        document.getElementById("result1").innerHTML=localStorage.pag
+
+
+                var myDate=new Date();
+                var year=myDate.getFullyear();
+                document.getElementById('year').innerHTML=year;
+</script>
+ 
+                               
+         
+
+
